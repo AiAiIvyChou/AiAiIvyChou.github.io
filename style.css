@@ -11,3 +11,6 @@
 .open-folder:hover{
     opacity:1
 }
+.close-folder:hover{
+    opacity:0
+}
