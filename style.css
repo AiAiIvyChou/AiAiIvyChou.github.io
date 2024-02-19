@@ -1,16 +1,65 @@
-.close-folder{
-    position:relative;
-    cursor: pointer;
+*{
+    padding: 0;
+    margin: 0;
 }
-.open-folder{
-    position:absolute;
+header{
+    overflow: hidden;
+    padding: 30px ;
+    color:darkslateblue;
+    font-family:Courier;
+    position: relative;
+    font-size: 17px;
+}
+.pill-nav{
+    display: inline;
+    position: absolute;
+    right: 3vw;
     top:0;
-    left:0;
-    opacity:0
+    line-height: 100px;
 }
-.open-folder:hover{
-    opacity:1
+/* Style the links in the pill-nav */
+.pill-nav a {    
+    color: darkslateblue;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 60px;
+}  
+/* Change the color of links on mouse-over */
+.pill-nav a:hover {
+    background-color: rgba(72, 61, 139, 0.5);
+    color: beige;
 }
-.close-folder:hover{
-    opacity:0
+/* Add a color to the active/current link */
+.pill-nav a.active {
+    background-color: rgba(72, 61, 139, 0.5);
+    color: beige;
+}
+/* Responsive */
+@media screen and (max-width: 500px) {
+    header {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .pill-nav {
+      float: none;
+    }
+}
+body{
+    background-image: url('./image/windows\ 桌布.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.latest-row {
+    display: flex;
+    
+}
+  
+.latest-column {
+    flex: 25%;
+    padding: 50px;
+    align-items: center;
 }
