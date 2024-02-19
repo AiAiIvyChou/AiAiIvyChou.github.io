@@ -59,7 +59,7 @@ body{
 }
   
 .latest-column {
-    flex: 25%;
+    flex: 33.33%;
     padding: 50px;
     align-items: center;
 }
