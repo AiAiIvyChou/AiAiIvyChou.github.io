@@ -4,11 +4,12 @@
 }
 header{
     overflow: hidden;
-    padding: 30px ;
+    padding: 300px;
     color:darkslateblue;
     font-family:Courier;
     position: relative;
     font-size: 17px;
+    background-color: white;
 }
 .pill-nav{
     display: inline;
@@ -25,17 +26,65 @@ header{
     text-decoration: none;
     font-size: 20px;
     border-radius: 60px;
-}  
+}
+  
 /* Change the color of links on mouse-over */
 .pill-nav a:hover {
     background-color: rgba(72, 61, 139, 0.5);
     color: beige;
 }
+  
 /* Add a color to the active/current link */
 .pill-nav a.active {
     background-color: rgba(72, 61, 139, 0.5);
     color: beige;
 }
+/* Dropdown Button */
+.dropbtn {
+    color: darkslateblue;
+    padding: 10px;
+    font-size: 20px;
+    border:0;
+    background-color:rgba(0, 0, 0, 0);
+    font-family:courier;
+    border-radius: 60px;
+  }
+/* The container <div> - needed to position the dropdown content */  
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding:10px;
+  }
+ /* Dropdown Content (Hidden by Default) */ 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    text-align: center;
+    min-width: 10px;
+    z-index: 1;
+    border:0;
+  }
+/* Links inside the dropdown */ 
+.dropdown-content a {
+    color: black;
+    font-size: 15px;
+    padding: 1px;
+    text-decoration: none;
+    display: inline-block;
+    
+  }
+  
+.dropdown-content a:hover {background-color:rgba(72, 61, 139, 0.2);}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.dropdown:hover .dropbtn {
+    background-color: rgba(72, 61, 139, 0.5);
+    color:beige;
+}
+
 /* Responsive */
 @media screen and (max-width: 500px) {
     header {
@@ -45,10 +94,11 @@ header{
     }
     .pill-nav {
       float: none;
+    
     }
 }
 body{
-    background-image: url('./windows\ 桌布.png');
+    background-image: url('./image/windows\ 桌布.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -59,7 +109,7 @@ body{
 }
   
 .latest-column {
-    flex: 33.33%;
+    flex: 25%;
     padding: 50px;
     align-items: center;
 }
