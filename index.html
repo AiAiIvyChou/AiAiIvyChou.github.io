@@ -1,48 +1,92 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
-    <title style="color:cornsilk">
-        LazyBugZZZZ
-    </title>
-    <link rel="stylesheet" href="style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css"/>
+<script src="javascript.js"></script>
 </head>
 <body>
-    <meta charset="utf-8" /> <!--讓中文正常顯示 */-->
-    <header>
-    <h1>LazyBugzzzz...</h1>
-    <div class="pill-nav" id="myTopnav">
-        <a class="active" href="#home">Home</a>
-        <div class="dropdown">
-            <button class="dropbtn">Artworks</button>
-            <div class="dropdown-content">
-              <a href="#">Artworks</a>
-              <a href="#">Short comics</a>
-              <a href="#">Movie reviews</a>
-            </div>
-          </div>
-          <a href="#Activity">Activity</a>
-        <a href="#about me">About me</a>
-        
-      </div>
-    
-    </header>
+<meta charset="utf-8" /> <!--讓中文正常顯示 */-->
+<h1>LazyBugzzzz...</h1>
+<button class="tablink" onclick="openPage('About', this)">About</button>
+<button class="tablink" onclick="openPage('Activity', this)">Activity</button>
+<button class="tablink" onclick="openPage('Artworks', this)">Artworks</button>
+<button class="tablink" onclick="openPage('Home', this)"id="defaultOpen">Home</button>
 
-    <section>
-        
-        <div class="latest-row">
-            <div class="latest-column">
-                <img src="./宇作茶屋.png" alt="Matcha house" style="width:100%">
-            </div>
-            <div class="latest-column">
-                <img src="./Gogo.png" alt="Gogo" style="width:100%">
-            </div>
-            <div class="latest-column">
-                <img src="./驚恐咪嚕.png" alt="The cat is scared by the dog" style="width:100%">
-            </div>
-        </div>
-    </section>
-    <footer>
+<div id="Home" class="tabcontent">
+  <div class="marquee-container">
+    <div class="marquee">Latest artworks!Latest artworks!Latest artworks!Latest artworks!Latest artworks!</div>
+  </div>
+  <div class="latest-row">
+    <div class="latest-column">
+        <img src="image/宇作茶屋.png" alt="Matcha house" style="width:100%">
+        <div class="overlay">'Matcha house' <br> This is a lovely Japanese matcha house located in Tainan.</div>
+    </div>
+    <div class="latest-column">
+        <img src="image/Gogo.png" alt="Gogo" style="width:100%">
+        <div class="overlay">'Gogo Yubari' <br> Gogo is a killer queen in 'Kill Bill', which is one of my favorite movie.</div>
+    </div>
+    <div class="latest-column">
+        <img src="image/驚恐咪嚕.png" alt="The cat is scared by the dog" style="width:100%">
+        <div class="overlay">'Scared Miru' <br> Miru is my cousin's  cat. She is afraid of any intruder. MEOW!!</div>
+    </div>
+    </div>
+  
+</div>
 
-    </footer>
-</body> 
-</html>
+<div id="Artworks" class="tabcontent">
+  <h3>Artworks</h3>
+  <ul class="list">
+    <li class="item"><div class="content"><img src="./image/問路屬性.png" alt="Matcha house" style="width:100%"></div></li>
+    <li class="item"><div class="content"><img src="./image/問路屬性1.5.png" alt="Matcha house" style="width:100%"></div></li>
+    <li class="item"><div class="content"><img src="./image/問路屬性-2.png" alt="Matcha house" style="width:100%"></div></li>
+    <li class="item"><div class="content"><img src="./image/問路屬性-3.png" alt="Matcha house" style="width:100%"></div></li>
+  </ul>
+  <br>
+  <ul class="list">
+    <li class="item"><div class="content"><img src="./image/快篩.JPG" alt="Matcha house" style="width:100%"></div></li>
+    <li class="item"><div class="content"><img src="./image/快篩2.JPG" alt="Matcha house" style="width:100%"></div></li>
+  </ul>  
+  <br>
+  <ul class="list">
+    <li class="item"><div class="content"><img src="./image/酷啤鳳梨.png" alt="Matcha house" style="width:100%"></div></li>
+  </ul> 
+  <br>
+  <ul class="list">
+    <li class="item"><div class="content"><img src="./image/sad cake.PNG" alt="Matcha house" style="width:100%"></div></li>
+  </ul> 
+</div>
+
+<div id="Activity" class="tabcontent">
+  <h3>Activity</h3>
+  
+</div>
+
+<div id="About" class="tabcontent">
+  <div class="about">
+    <img src="image/me-gif.gif" width="500px">
+  </div>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
